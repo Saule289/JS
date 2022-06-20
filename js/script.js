@@ -1,36 +1,47 @@
+/* Задание на урок:
 
-// console.log('hello')
+1) Создать переменную numberOfFilms и в неё поместить ответ от пользователя на вопрос:
+'Сколько фильмов вы уже посмотрели?'
 
-const { INTERNAL_COMPUTE_OFFSET_SCRIPT } = require("selenium-webdriver/lib/input");
+2) Создать объект personalMovieDB и в него поместить такие свойства:
+    - count - сюда передается ответ на первый вопрос
+    - movies - в это свойство поместить пустой объект
+    - actors - тоже поместить пустой объект
+    - genres - сюда поместить пустой массив
+    - privat - в это свойство поместить boolean(логическое) значение false
 
-// console.log(true && false || true)
+3) Задайте пользователю по два раза вопросы:
+    - 'Один из последних просмотренных фильмов?'
+    - 'На сколько оцените его?'
+Ответы стоит поместить в отдельные переменные
+Записать ответы в объект movies в формате: 
+    movies: {
+        'logan': '8.1'
+    }
 
-// if (false && true || false) {
-//     console.log('1')
-// } else{
-//     console.log('2')
-// }
-
-let dogshow = true
-let age = 17;
-let money = 700;
-let dog = true;
-
-// if (age >= 18 && money ==1000 &&  dog) {
-//     console.log("Get ticket")
-// } else {if (age < 18) {
-//     console.log("Early")
-// }  if (money <1000) {
-// console.log("Keep calm and work hard!!")
-// }  if (!dog) {
-//     console.log("Get a cat")
-// } }
+Проверить, чтобы все работало без ошибок в консоли */
 
 
-switch (dogshow) {
-    case age >=18:
-        console.log("Time to win")
-       }
+const numberOfFilms = +prompt ('Сколько фильмов ввы уже посмотрели?', '');
+
+const personalMovieDB = {
+    count: numberOfFilms,
+    movies: {},
+   actors: {},
+   genres: [],
+   privat: false 
+};
+
+const a = prompt('Один из последних просмотренных фильмов?', ''),
+      b = prompt('На сколько оцените его?', ''),
+      c = prompt('Один из последних просмотренных фильмов?', ''),
+      d = prompt('На сколько оцените его?', '');
+
+      personalMovieDB.movies[a] = b;
+      personalMovieDB.movies[c] = d;
+
+      console.log(personalMovieDB); 
+
 
 
 
